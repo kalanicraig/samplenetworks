@@ -1,0 +1,168 @@
+name = "Gesta"
+description = "Episcopal Gesta"
+requireLogin = false
+hideDeleteNodeButton = false
+allowLoggedInUserToImport = false
+duplicateWarning = "You’re entering a duplicate node.  Do you want to View the Existing node, or Continue creating?"
+nodeIsLockedMessage = "This node is currently being edited by someone else, please try again later."
+edgeIsLockedMessage = "This edge is currently being edited by someone else, please try again later."
+templateIsLockedMessage = "The template is currently being edited, please try again later."
+importIsLockedMessage = "Data is currently being imported, please try again later."
+nodeDefaultTransparency = 1
+edgeDefaultTransparency = 0.6
+searchColor = "#008800"
+sourceColor = "#ffa500"
+
+[citation]
+text = "Gesta"
+hidden = false
+
+[nodeDefs.id]
+type = "number"
+displayLabel = "id"
+exportLabel = "ID"
+help = "System-generated unique id number"
+
+[nodeDefs.label]
+type = "string"
+displayLabel = "Label"
+exportLabel = "Label"
+help = "A short title for the node"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.type]
+type = "select"
+displayLabel = "Type"
+exportLabel = "Type"
+help = "Multiple people are a 'Group'"
+includeInGraphTooltip = true
+hidden = false
+
+  [[nodeDefs.type.options]]
+  color = "#eeeeee"
+  label = ""
+
+  [[nodeDefs.type.options]]
+  color = "#aabaf2"
+  label = "Person"
+
+  [[nodeDefs.type.options]]
+  color = "#f2baaa"
+  label = "Bishop"
+
+  [[nodeDefs.type.options]]
+  color = "#3399ff"
+  label = "Group"
+
+  [[nodeDefs.type.options]]
+  color = "#00ff00"
+  label = "Place"
+
+  [[nodeDefs.type.options]]
+  color = "#ff0000"
+  label = "Thing"
+
+  [[nodeDefs.type.options]]
+  color = "#009999"
+  label = "Event"
+
+[nodeDefs.notes]
+type = "string"
+displayLabel = "Significance"
+exportLabel = "Significance"
+help = "Add some details."
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.info]
+type = "string"
+displayLabel = "Geocode or Date"
+exportLabel = "Geocode or Date"
+help = "Use latitude/longitude or a date mm/dd/yyy"
+includeInGraphTooltip = true
+hidden = true
+
+[nodeDefs.degrees]
+type = "number"
+displayLabel = "Degrees"
+exportLabel = "Degrees"
+help = "Number of edges."
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.created]
+displayLabel = "Created"
+exportLabel = "Created"
+includeInGraphTooltip = true
+help = "Date and time node was created"
+
+[nodeDefs.updated]
+displayLabel = "Last Updated"
+exportLabel = "Last Updated"
+includeInGraphTooltip = true
+help = "Date and time of last update"
+
+[edgeDefs.id]
+type = "number"
+displayLabel = "id"
+exportLabel = "ID"
+help = "System-generated unique id number"
+
+[edgeDefs.source]
+type = "string"
+displayLabel = "Source"
+exportLabel = "Source"
+help = ""
+hidden = false
+
+[edgeDefs.target]
+type = "string"
+displayLabel = "Target"
+exportLabel = "Target"
+help = ""
+hidden = false
+
+[edgeDefs.type]
+type = "select"
+displayLabel = "Type"
+exportLabel = "Type"
+help = ""
+hidden = false
+
+  [[edgeDefs.type.options]]
+  color = "#7a7a7a"
+  label = ""
+
+  [[edgeDefs.type.options]]
+  color = "#7a4a00"
+  label = "interacts with"
+
+  [[edgeDefs.type.options]]
+  color = "#002e7a"
+  label = "mentions"
+
+  [[edgeDefs.type.options]]
+  color = "#38571a"
+  label = "visits"
+
+[edgeDefs.notes]
+type = "string"
+displayLabel = "Signficance"
+exportLabel = "Signficance"
+help = ""
+hidden = false
+
+[edgeDefs.info]
+type = "string"
+displayLabel = "Approximate Date of Interaction"
+exportLabel = "Approximate Date of Interaction"
+help = ""
+hidden = true
+
+[edgeDefs.citation]
+type = "string"
+displayLabel = "Citation"
+exportLabel = "Citation"
+help = "Enter Chapter number."
+hidden = false
