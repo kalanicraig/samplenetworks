@@ -13,6 +13,7 @@ edgeDefaultTransparency = 0.7
 searchColor = "#FFFF00"
 sourceColor = "#FFa500"
 
+
 [citation]
 text = "No citation set"
 hidden = false
