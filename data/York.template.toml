@@ -1,5 +1,5 @@
-name = "Dunn York network"
-description = "Dunn York network"
+name = "York network"
+description = "York network"
 requireLogin = false
 hideDeleteNodeButton = false
 allowLoggedInUserToImport = false
