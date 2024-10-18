@@ -1,0 +1,177 @@
+name = "Rao"
+description = "IDAH Supported network for PRao"
+requireLogin = false
+hideDeleteNodeButton = false
+allowLoggedInUserToImport = false
+nodeSizeDefault = 5
+nodeSizeMax = 50
+edgeSizeDefault = 1
+edgeSizeMax = 25
+filterFade = "Fade"
+filterFadeHelp = "Show matches, Fade others"
+filterReduce = "Reduce"
+filterReduceHelp = "Show matches, Reduce (remove) others & recalculate sizes"
+filterFocus = "Focus"
+filterFocusHelp = "Show only nodes connected to the selected node within range"
+duplicateWarning = "You’re entering a duplicate node.  Do you want to View the Existing node, or Continue creating?"
+nodeIsLockedMessage = "This node is currently being edited by someone else, please try again later."
+edgeIsLockedMessage = "This edge is currently being edited by someone else, please try again later."
+templateIsLockedMessage = "The template is currently being edited, please try again later."
+importIsLockedMessage = "Data is currently being imported, please try again later."
+nodeDefaultTransparency = 1
+edgeDefaultTransparency = 0.7
+searchColor = "#008800"
+sourceColor = "#ffa500"
+
+[citation]
+text = "IDAH Supported network for PRao"
+hidden = false
+
+[nodeDefs.label]
+type = "string"
+displayLabel = "Label"
+exportLabel = "Label"
+help = "A short title for the node"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.type]
+type = "select"
+displayLabel = "Type"
+exportLabel = "Type"
+help = "Multiple people are a 'Group'"
+includeInGraphTooltip = true
+hidden = false
+
+  [[nodeDefs.type.options]]
+  label = ""
+  color = "#EEEEEE"
+
+  [[nodeDefs.type.options]]
+  label = "Person"
+  color = "#aabaf2"
+
+  [[nodeDefs.type.options]]
+  label = "Media Organization"
+  color = "#3399FF"
+
+  [[nodeDefs.type.options]]
+  label = "Caste grouping"
+  color = "#00FF00"
+
+  [[nodeDefs.type.options]]
+  label = "Field of Work"
+  color = "#FF0000"
+
+  [[nodeDefs.type.options]]
+  label = "Educational Institution"
+  color = "#ffff00"
+
+[nodeDefs.degrees]
+type = "string"
+displayLabel = "Degrees"
+exportLabel = "Degrees"
+help = "Number of edges."
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.notes]
+type = "string"
+displayLabel = "Notes"
+exportLabel = "Notes"
+help = "Notes about this node"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.info]
+type = "string"
+displayLabel = "Geocode or Date"
+exportLabel = "Geocode or Date"
+help = "Use latitude/longitude or a date YYYY-MM-DD"
+includeInGraphTooltip = true
+hidden = true
+
+[nodeDefs.id]
+type = "number"
+displayLabel = "id"
+exportLabel = "ID"
+help = "System-generated unique id number"
+
+[nodeDefs.updated]
+displayLabel = "Last Updated"
+exportLabel = "Last Updated"
+help = "Date and time of last update"
+includeInGraphTooltip = true
+
+[nodeDefs.created]
+displayLabel = "Created"
+exportLabel = "Created"
+help = "Date and time node was created"
+includeInGraphTooltip = true
+
+[edgeDefs.source]
+type = "string"
+displayLabel = "Source"
+exportLabel = "Source"
+help = "Source"
+hidden = false
+
+[edgeDefs.type]
+type = "select"
+displayLabel = "Type"
+exportLabel = "Type"
+help = "Type"
+hidden = false
+
+  [[edgeDefs.type.options]]
+  label = ""
+
+  [[edgeDefs.type.options]]
+  label = "has a professional relationship with"
+
+  [[edgeDefs.type.options]]
+  label = "has a kinship relationship with"
+
+  [[edgeDefs.type.options]]
+  label = "is related in some other way to"
+
+[edgeDefs.target]
+type = "string"
+displayLabel = "Target"
+exportLabel = "Target"
+help = "Target"
+hidden = false
+
+[edgeDefs.notes]
+type = "string"
+displayLabel = "Notes"
+exportLabel = "Notes"
+help = "Notes about this edge"
+hidden = false
+
+[edgeDefs.info]
+type = "string"
+displayLabel = "Date"
+exportLabel = "Date"
+help = "'YYYY-MM-DD' format for sorting purposes"
+hidden = false
+
+[edgeDefs.citation]
+type = "string"
+displayLabel = "Citation"
+exportLabel = "Citation"
+help = "Which source did this come from?"
+hidden = false
+
+[edgeDefs.category]
+type = "string"
+displayLabel = "Category"
+exportLabel = "Category"
+help = "Political? Social? Economy?"
+hidden = true
+
+[edgeDefs.id]
+type = "number"
+displayLabel = "id"
+exportLabel = "ID"
+help = "System-generated unique id number"

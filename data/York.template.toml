@@ -1,0 +1,339 @@
+name = "York network"
+description = "York network"
+requireLogin = false
+hideDeleteNodeButton = false
+allowLoggedInUserToImport = false
+nodeSizeDefault = 5
+nodeSizeMax = 50
+edgeSizeDefault = 1
+edgeSizeMax = 25
+filterFade = "Fade"
+filterFadeHelp = "Show matches, Fade others"
+filterReduce = "Reduce"
+filterReduceHelp = "Show matches, Reduce (remove) others & recalculate sizes"
+filterFocus = "Focus"
+filterFocusHelp = "Show only nodes connected to the selected node within range"
+duplicateWarning = "You’re entering a duplicate node.  Do you want to View the Existing node, or Continue creating?"
+nodeIsLockedMessage = "This node is currently being edited by someone else, please try again later."
+edgeIsLockedMessage = "This edge is currently being edited by someone else, please try again later."
+templateIsLockedMessage = "The template is currently being edited, please try again later."
+importIsLockedMessage = "Data is currently being imported, please try again later."
+nodeDefaultTransparency = 1
+edgeDefaultTransparency = 0.7
+searchColor = "#008800"
+sourceColor = "#ffa500"
+
+[citation]
+text = "No citation set"
+hidden = false
+
+[nodeDefs.id]
+type = "number"
+displayLabel = "Id"
+exportLabel = "ID"
+help = "System-generated unique id number"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.label]
+type = "string"
+displayLabel = "label"
+exportLabel = "Label"
+help = "Display name of the node"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.type]
+type = "select"
+displayLabel = "Type"
+exportLabel = "NodeType"
+help = "Select a category"
+includeInGraphTooltip = true
+hidden = false
+
+  [[nodeDefs.type.options]]
+  color = "#eeeeee"
+  label = ""
+
+  [[nodeDefs.type.options]]
+  color = "#53d5fd"
+  label = "M"
+
+  [[nodeDefs.type.options]]
+  color = "#ed719e"
+  label = "W"
+
+  [[nodeDefs.type.options]]
+  color = "#fff76b"
+  label = "U"
+
+[nodeDefs.notes]
+type = "select"
+displayLabel = "Relationship"
+exportLabel = "Relationship"
+help = "Relationship"
+includeInGraphTooltip = true
+hidden = false
+
+  [[nodeDefs.notes.options]]
+  label = ""
+
+  [[nodeDefs.notes.options]]
+  label = "Royal"
+
+  [[nodeDefs.notes.options]]
+  label = "LIW"
+
+  [[nodeDefs.notes.options]]
+  label = "Son"
+
+  [[nodeDefs.notes.options]]
+  label = "Husband"
+
+  [[nodeDefs.notes.options]]
+  label = "Kin"
+
+  [[nodeDefs.notes.options]]
+  label = "Daughter"
+
+  [[nodeDefs.notes.options]]
+  label = "Brother-in-Law"
+
+  [[nodeDefs.notes.options]]
+  label = "Grandson"
+
+  [[nodeDefs.notes.options]]
+  label = "Father"
+
+  [[nodeDefs.notes.options]]
+  label = "Brother"
+
+[nodeDefs.info]
+type = "select"
+displayLabel = "Tier"
+exportLabel = "Tier"
+help = "Tier"
+includeInGraphTooltip = true
+hidden = false
+
+  [[nodeDefs.info.options]]
+  label = "Royal"
+
+  [[nodeDefs.info.options]]
+  label = "Tier 3"
+
+  [[nodeDefs.info.options]]
+  label = "Tier 2"
+
+  [[nodeDefs.info.options]]
+  label = "Tier 4"
+
+  [[nodeDefs.info.options]]
+  label = "Tier 1"
+
+[nodeDefs.provenance]
+type = "select"
+displayLabel = "Social Status"
+exportLabel = "SocStatus"
+help = "Social Status"
+includeInGraphTooltip = true
+hidden = false
+
+  [[nodeDefs.provenance.options]]
+  label = "Gentlewoman/Mistress"
+
+  [[nodeDefs.provenance.options]]
+  label = "Lady/Knight's Wife"
+
+  [[nodeDefs.provenance.options]]
+  label = "Gentleman"
+
+  [[nodeDefs.provenance.options]]
+  label = "Lower Servant"
+
+  [[nodeDefs.provenance.options]]
+  label = "Lady/earl's daughter"
+
+  [[nodeDefs.provenance.options]]
+  label = "Baroness"
+
+  [[nodeDefs.provenance.options]]
+  label = "Knight"
+
+  [[nodeDefs.provenance.options]]
+  label = "Mistress/Knight's daughter"
+
+[nodeDefs.comments]
+type = "string"
+displayLabel = "Comments"
+exportLabel = "Comments"
+help = 'Enter "<comment> -- <name> <date>"'
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.degrees]
+type = "number"
+displayLabel = "Degrees"
+exportLabel = "Degrees"
+help = "Number of edges connected to this node"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.created]
+displayLabel = "Created"
+exportLabel = "Created"
+includeInGraphTooltip = true
+help = "Date and time node was created"
+hidden = false
+
+[nodeDefs.updated]
+displayLabel = "Updated"
+exportLabel = "Updated"
+includeInGraphTooltip = true
+help = "Date and time node was last modified"
+hidden = false
+
+[nodeDefs.revision]
+displayLabel = "Revision"
+exportLabel = "Revision"
+includeInGraphTooltip = true
+help = "Number of times this node has been revised"
+hidden = true
+
+[edgeDefs.id]
+type = "number"
+displayLabel = "Id"
+exportLabel = "ID"
+help = "System-generated unique id number"
+hidden = false
+
+[edgeDefs.source]
+type = "number"
+displayLabel = "Source"
+exportLabel = "Source"
+help = "Edge source node"
+hidden = false
+
+[edgeDefs.target]
+type = "number"
+displayLabel = "Target"
+exportLabel = "Target"
+help = "Edge target node"
+hidden = false
+
+[edgeDefs.type]
+type = "select"
+displayLabel = "Type"
+exportLabel = "EdgeType"
+help = "Type of edge connection"
+hidden = false
+
+  [[edgeDefs.type.options]]
+  color = "#eeeeee"
+  label = ""
+  replacement = ""
+  delete = false
+
+  [[edgeDefs.type.options]]
+  color = "#000000"
+  label = "is related to"
+  replacement = ""
+  delete = false
+
+  [[edgeDefs.type.options]]
+  color = "#929292"
+  label = "is potentially related to"
+  replacement = ""
+  delete = false
+
+  [[edgeDefs.type.options]]
+  color = "#008cb4"
+  label = "does service for"
+  replacement = ""
+  delete = false
+
+  [[edgeDefs.type.options]]
+  color = "#e32400"
+  label = "rewards"
+  replacement = ""
+  delete = false
+
+  [[edgeDefs.type.options]]
+  color = "#9929bd"
+  label = "engages in svc reward mix"
+  replacement = ""
+  delete = false
+
+[edgeDefs.notes]
+type = "string"
+displayLabel = "Notes"
+exportLabel = "Notes"
+help = "Significance of the connection"
+hidden = false
+
+[edgeDefs.info]
+type = "number"
+displayLabel = "Date"
+exportLabel = "Date"
+help = '"YYYY-MM-DD" format"'
+hidden = false
+
+[edgeDefs.weight]
+type = "number"
+defaultValue = 1
+displayLabel = "Weight"
+exportLabel = "Weight"
+help = "Weight of edge"
+includeInGraphTooltip = true
+isRequired = true
+hidden = false
+
+[edgeDefs.provenance]
+type = "string"
+displayLabel = "Provenance"
+exportLabel = "Provenance"
+help = "Who created this?  (aka Provenance)"
+hidden = false
+
+[edgeDefs.comments]
+type = "string"
+displayLabel = "Comments"
+exportLabel = "Comments"
+help = 'Enter "<comment> -- <name> <date>"'
+includeInGraphTooltip = true
+hidden = false
+
+[edgeDefs.citation]
+type = "string"
+displayLabel = "Citation"
+exportLabel = "Citation"
+help = 'Source Book.Chapter (e.g. "Part 2 06.03")'
+hidden = false
+
+[edgeDefs.category]
+type = "string"
+displayLabel = "Category"
+exportLabel = "Category"
+help = "Category (deprecated)"
+hidden = true
+
+[edgeDefs.created]
+displayLabel = "Created"
+exportLabel = "Created"
+includeInGraphTooltip = true
+help = "Date and time edge was created"
+hidden = false
+
+[edgeDefs.updated]
+displayLabel = "Updated"
+exportLabel = "Updated"
+includeInGraphTooltip = true
+help = "Date and time edge was last modified"
+hidden = false
+
+[edgeDefs.revision]
+displayLabel = "Revision"
+exportLabel = "Revision"
+includeInGraphTooltip = true
+help = "Number of times this edge has been revised"
+hidden = true
