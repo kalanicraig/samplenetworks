@@ -1,0 +1,273 @@
+name = "Land Management"
+description = "Network for Managing trade and travel in Ancient Greece."
+requireLogin = false
+hideDeleteNodeButton = false
+allowLoggedInUserToImport = false
+nodeSizeDefault = 5
+nodeSizeMax = 50
+edgeSizeDefault = 1
+edgeSizeMax = 25
+filterFade = "Fade"
+filterFadeHelp = "Show matches, Fade others"
+filterReduce = "Reduce"
+filterReduceHelp = "Show matches, Reduce (remove) others & recalculate sizes"
+filterFocus = "Focus"
+filterFocusHelp = "Show only nodes connected to the selected node within range"
+duplicateWarning = "You’re entering a duplicate node.  Do you want to View the Existing node, or Continue creating?"
+nodeIsLockedMessage = "This node is currently being edited by someone else, please try again later."
+edgeIsLockedMessage = "This edge is currently being edited by someone else, please try again later."
+templateIsLockedMessage = "The template is currently being edited, please try again later."
+importIsLockedMessage = "Data is currently being imported, please try again later."
+nodeDefaultTransparency = 1
+edgeDefaultTransparency = 0.7
+searchColor = "#008800"
+sourceColor = "#ffa500"
+
+[citation]
+text = "No citation set"
+hidden = false
+
+[nodeDefs.id]
+type = "number"
+displayLabel = "Id"
+exportLabel = "ID"
+help = "System-generated unique id number"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.label]
+type = "string"
+displayLabel = "label"
+exportLabel = "Label"
+help = "Display name of the node"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.type]
+type = "select"
+displayLabel = "Type"
+exportLabel = "NodeType"
+help = "Select a category"
+includeInGraphTooltip = true
+hidden = false
+
+  [[nodeDefs.type.options]]
+  color = "#eeeeee"
+  label = ""
+
+  [[nodeDefs.type.options]]
+  color = "#5b5b5b"
+  label = "Olives"
+
+  [[nodeDefs.type.options]]
+  color = "#87401d"
+  label = "Grapes"
+
+  [[nodeDefs.type.options]]
+  color = "#dbdbdb"
+  label = "Barley"
+
+  [[nodeDefs.type.options]]
+  color = "#e6dbb7"
+  label = "Wheat"
+
+  [[nodeDefs.type.options]]
+  color = "#53d5fd"
+  label = "Team Capital"
+
+[nodeDefs.notes]
+type = "markdown"
+displayLabel = "Notes"
+exportLabel = "Notes"
+help = "General purpose notes text field"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.info]
+type = "number"
+displayLabel = "Hectares"
+exportLabel = "hectares"
+help = "The total number of squares in this land mass"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.provenance]
+type = "string"
+displayLabel = "Provenance"
+exportLabel = "Provenance"
+help = "Who created this?  (aka Provenance)"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.comments]
+type = "string"
+displayLabel = "Terrain description"
+exportLabel = "Terrain description"
+help = "What makes it easy or hard to travel this distance?"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.region]
+type = "string"
+displayLabel = "Region"
+exportLabel = "Region"
+help = "Numbered regions so that we can filter them."
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.degrees]
+type = "number"
+displayLabel = "Degrees"
+exportLabel = "Degrees"
+help = "Number of edges connected to this node"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.created]
+displayLabel = "Created"
+exportLabel = "Created"
+includeInGraphTooltip = true
+help = "Date and time node was created"
+hidden = false
+
+[nodeDefs.updated]
+displayLabel = "Updated"
+exportLabel = "Updated"
+includeInGraphTooltip = true
+help = "Date and time node was last modified"
+hidden = false
+
+[nodeDefs.revision]
+displayLabel = "Revision"
+exportLabel = "Revision"
+includeInGraphTooltip = true
+help = "Number of times this node has been revised"
+hidden = true
+
+[edgeDefs.id]
+type = "number"
+displayLabel = "Id"
+exportLabel = "ID"
+help = "System-generated unique id number"
+hidden = false
+
+[edgeDefs.source]
+type = "number"
+displayLabel = "Source"
+exportLabel = "Source"
+help = "Edge source node"
+hidden = false
+
+[edgeDefs.target]
+type = "number"
+displayLabel = "Target"
+exportLabel = "Target"
+help = "Edge target node"
+hidden = false
+
+[edgeDefs.type]
+type = "select"
+displayLabel = "Type"
+exportLabel = "EdgeType"
+help = "Type of edge connection"
+hidden = false
+
+  [[edgeDefs.type.options]]
+  color = "#eeeeee"
+  label = ""
+  replacement = ""
+  delete = false
+
+  [[edgeDefs.type.options]]
+  color = "#698ac3"
+  label = "is adjacent to"
+  replacement = ""
+  delete = false
+
+[edgeDefs.info]
+type = "number"
+displayLabel = "Date"
+exportLabel = "Date"
+help = '"YYYY-MM-DD" format"'
+hidden = true
+
+[edgeDefs.weight]
+type = "number"
+defaultValue = 1
+displayLabel = "Difficulty of travel"
+exportLabel = "Weight"
+help = "Weight of edge"
+includeInGraphTooltip = true
+isRequired = true
+hidden = false
+
+[edgeDefs.notes]
+type = "string"
+displayLabel = "Notes"
+exportLabel = "Notes"
+help = "Significance of the connection"
+hidden = false
+
+[edgeDefs.provenance]
+type = "string"
+displayLabel = "Provenance"
+exportLabel = "Provenance"
+help = "Who created this?  (aka Provenance)"
+hidden = false
+
+[edgeDefs.comments]
+type = "string"
+displayLabel = "Comments"
+exportLabel = "Comments"
+help = 'Enter "<comment> -- <name> <date>"'
+includeInGraphTooltip = true
+hidden = false
+
+[edgeDefs.citation]
+type = "string"
+displayLabel = "Citation"
+exportLabel = "Citation"
+help = 'Source Book.Chapter (e.g. "Part 2 06.03")'
+hidden = true
+
+[edgeDefs.category]
+type = "string"
+displayLabel = "Category"
+exportLabel = "Category"
+help = "Category (deprecated)"
+hidden = true
+
+[edgeDefs.created]
+displayLabel = "Created"
+exportLabel = "Created"
+includeInGraphTooltip = true
+help = "Date and time edge was created"
+hidden = true
+
+[edgeDefs.updated]
+displayLabel = "Updated"
+exportLabel = "Updated"
+includeInGraphTooltip = true
+help = "Date and time edge was last modified"
+hidden = false
+
+[edgeDefs.revision]
+displayLabel = "Revision"
+exportLabel = "Revision"
+includeInGraphTooltip = true
+help = "Number of times this edge has been revised"
+hidden = true
+
+[edgeDefs.sourceLabel]
+displayLabel = "Source"
+exportLabel = "Source Label"
+help = "Source label"
+hidden = false
+type = "string"
+
+[edgeDefs.targetLabel]
+displayLabel = "Target"
+exportLabel = "Target Label"
+help = "Target label"
+hidden = false
+type = "string"
