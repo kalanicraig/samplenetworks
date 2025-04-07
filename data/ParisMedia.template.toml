@@ -1,0 +1,244 @@
+name = "Untitled"
+description = "Default empty template"
+requireLogin = false
+hideDeleteNodeButton = false
+allowLoggedInUserToImport = false
+duplicateWarning = "You’re entering a duplicate node.  Do you want to View the Existing node, or Continue creating?"
+nodeIsLockedMessage = "This node is currently being edited by someone else, please try again later."
+edgeIsLockedMessage = "This edge is currently being edited by someone else, please try again later."
+templateIsLockedMessage = "The template is currently being edited, please try again later."
+importIsLockedMessage = "Data is currently being imported, please try again later."
+nodeDefaultTransparency = 1
+edgeDefaultTransparency = 0.7
+searchColor = "#ffff00"
+sourceColor = "#ffa500"
+
+[citation]
+text = "No citation set"
+hidden = false
+
+[nodeDefs.id]
+type = "number"
+displayLabel = "Id"
+exportLabel = "ID"
+help = "System-generated unique id number"
+
+[nodeDefs.label]
+type = "string"
+displayLabel = "Label"
+exportLabel = "Label"
+help = "Display name of the node"
+includeInGraphTooltip = true
+
+[nodeDefs.type]
+type = "select"
+displayLabel = "Type"
+exportLabel = "Type"
+help = "Multiple people are a 'Group'"
+includeInGraphTooltip = true
+hidden = false
+
+  [[nodeDefs.type.options]]
+  label = ""
+  color = "#eeee"
+
+  [[nodeDefs.type.options]]
+  color = "#00fbff"
+  label = "Person"
+  replacement = ""
+  delete = false
+
+  [[nodeDefs.type.options]]
+  color = "#3399ff"
+  label = "Publishing "
+  replacement = ""
+  delete = false
+
+  [[nodeDefs.type.options]]
+  color = "#7b219f"
+  label = "Movies"
+  replacement = ""
+  delete = false
+
+  [[nodeDefs.type.options]]
+  color = "#006d8f"
+  label = "Music"
+  replacement = ""
+  delete = false
+
+  [[nodeDefs.type.options]]
+  color = "#fecb3e"
+  label = "Theater"
+  replacement = ""
+  delete = false
+
+  [[nodeDefs.type.options]]
+  color = "#4f7a28"
+  label = "Sports"
+  replacement = ""
+  delete = false
+
+  [[nodeDefs.type.options]]
+  color = "#ff0000"
+  label = "Surgery"
+  replacement = ""
+  delete = false
+
+  [[nodeDefs.type.options]]
+  color = "#a96800"
+  label = "Place"
+  replacement = ""
+  delete = false
+
+[nodeDefs.notes]
+type = "string"
+displayLabel = "Significance"
+exportLabel = "Notes"
+help = "Add some details"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.info]
+type = "number"
+displayLabel = "Number"
+exportLabel = "Info"
+help = "Some number comparison"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.degrees]
+type = "number"
+displayLabel = "Degrees"
+exportLabel = "Degrees"
+help = "Number of edges"
+includeInGraphTooltip = true
+hidden = false
+
+[nodeDefs.created]
+displayLabel = "Created"
+exportLabel = "Created"
+includeInGraphTooltip = true
+help = "Date and time node was created"
+hidden = false
+
+[nodeDefs.updated]
+displayLabel = "Last Updated"
+exportLabel = "Last Updated"
+includeInGraphTooltip = true
+help = "Date and time node was last modified"
+hidden = false
+
+[nodeDefs.revision]
+displayLabel = "Revisions"
+exportLabel = "Revisions"
+includeInGraphTooltip = true
+help = "Number of times node has been revised"
+hidden = true
+
+[edgeDefs.id]
+type = "number"
+displayLabel = "Id"
+exportLabel = "ID"
+help = "System-generated unique id number"
+
+[edgeDefs.source]
+type = "node"
+displayLabel = "Source"
+exportLabel = "Source"
+help = ""
+hidden = false
+
+[edgeDefs.target]
+type = "node"
+displayLabel = "Target"
+exportLabel = "Target"
+help = ""
+hidden = false
+
+[edgeDefs.type]
+type = "select"
+displayLabel = "Type"
+exportLabel = "Type"
+help = ""
+hidden = false
+
+  [[edgeDefs.type.options]]
+  color = "#000000"
+  label = ""
+
+  [[edgeDefs.type.options]]
+  color = "#000000"
+  label = "Visited at"
+
+  [[edgeDefs.type.options]]
+  color = "#000000"
+  label = "Visited with"
+
+  [[edgeDefs.type.options]]
+  color = "#000000"
+  label = "Lived at"
+
+  [[edgeDefs.type.options]]
+  color = "#000000"
+  label = "Performed at"
+
+  [[edgeDefs.type.options]]
+  color = "#000000"
+  label = "Performed in"
+
+  [[edgeDefs.type.options]]
+  color = "#000000"
+  label = "Collaborated with"
+
+  [[edgeDefs.type.options]]
+  color = "#000000"
+  label = "Passed"
+
+[edgeDefs.notes]
+type = "string"
+displayLabel = "Significance"
+exportLabel = "Significance"
+help = ""
+hidden = false
+
+[edgeDefs.info]
+type = "string"
+displayLabel = "Date"
+exportLabel = "Date"
+help = "'YYYY-MM-DD' format"
+hidden = false
+
+[edgeDefs.citation]
+type = "string"
+displayLabel = "Citation"
+exportLabel = "Citation"
+help = "Source Book.Chapter (Part 2 06.03)"
+hidden = false
+
+[edgeDefs.category]
+type = "string"
+displayLabel = "Category"
+exportLabel = "Category"
+help = "Category?"
+hidden = false
+
+[edgeDefs.created]
+displayLabel = "Created"
+exportLabel = "Created"
+includeInGraphTooltip = true
+help = "Date and time edge was created"
+hidden = false
+
+[edgeDefs.updated]
+displayLabel = "Last Updated"
+exportLabel = "Last Updated"
+includeInGraphTooltip = true
+help = "Date and time edge was last modified"
+hidden = false
+
+[edgeDefs.revision]
+displayLabel = "Revisions"
+exportLabel = "Revisions"
+includeInGraphTooltip = true
+help = "Number of times edge has been revised"
+hidden = true
